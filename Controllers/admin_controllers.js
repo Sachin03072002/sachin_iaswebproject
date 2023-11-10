@@ -29,3 +29,15 @@ module.exports.addQuestion = async function (req, res) {
     }
 
 }
+module.exports.getQuestionPage = async function (req, res) {
+    try {
+        const question = await Question.findById(req.params.id);
+        res.render('Question-page', {
+            title: 'Question | ' + question.title,
+            question: question
+        });
+    } catch (err) {
+        console.log('Error: ', err);
+        res.status(500).send('Internal Server Error');
+    }
+}

@@ -1,0 +1,15 @@
+/* style.css */
+
+/* Responsive styles for the sign-up form */
+@media (max-width: 640px) {
+  .max-w-md {
+    max-width: 90%;
+  }
+}
+
+/* Additional styles for focus on form elements */
+input:focus,
+button:focus {
+  border-color: #48bb78; /* Change color as needed */
+  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.5); /* Change color and shadow as needed */
+}

@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/header.css">
+
+<div>
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="text-white">
+                <a href="#" class="text-xl font-bold">Your Logo</a>
+            </div>
+
+            <!-- Navbar Links (Hidden on mobile) -->
+            <div class="hidden md:flex space-x-4">
+                <% if (locals.user) { %>
+                    <a href="#" class="text-white">Profile</a>
+                    <a href="/sign-out" class="text-white">Logout</a>
+                    <% } else { %>
+                        <a href="/sign-up" class="text-white">Sign In</a>
+                        <a href="/sign-in" class="text-white">Login</a>
+                        <% } %>
+                            <% if (locals.isAdmin) { %>
+                                <a href="/admin/add-question-form" class="text-white">Add Question</a>
+                                <% } %>
+            </div>
+
+
+
+        </div>
+    </nav>
+
+
+</div>
