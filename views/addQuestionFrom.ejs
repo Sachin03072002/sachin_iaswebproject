@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/AddQuestion.css">
+
+<body class="bg-red-700">
+
+    <div class="container mx-auto p-8 mt-10 bg-white shadow-md rounded-md">
+        <h1 class="text-2xl font-bold mb-6">Add Question</h1>
+
+        <form action="/admin/add-question" method="post" enctype="multipart/form-data" class="space-y-4">
+            <div>
+                <label for="title" class="block text-sm font-medium text-gray-600">Title:</label>
+                <input type="text" id="title" name="title" required
+                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="questionText" class="block text-sm font-medium text-gray-600">Question Text:</label>
+                <textarea id="questionText" name="questionText" rows="4" required
+                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+
+            <div>
+                <label for="answer" class="block text-sm font-medium text-gray-600">Answer:</label>
+                <textarea id="answer" name="answer" rows="4" required
+                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+
+            <div>
+                <label for="image" class="block text-sm font-medium text-gray-600">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*"
+                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
+            </div>
+            <div>
+                <label for="submitTime" class="block text-sm font-medium text-gray-600">Submit Time:</label>
+                <input type="text" id="submitTime" name="submitTime" value="<%= new Date() %>" readonly
+                    class="mt-1 p-2 block w-full border rounded-md bg-gray-100 cursor-not-allowed">
+            </div>
+
+            <div>
+                <label for="subject" class="block text-sm font-medium text-gray-600">Subject:</label>
+                <input type="text" id="subject" name="subject" required
+                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="topic" class="block text-sm font-medium text-gray-600">Topic:</label>
+                <input type="text" id="topic" name="topic" required
+                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div>
+                <input type="submit" value="Submit"
+                    class="bg-green-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-green-600">
+            </div>
+        </form>
+    </div>
