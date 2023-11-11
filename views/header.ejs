@@ -1,32 +1,33 @@
 <link rel="stylesheet" href="/css/header.css">
 
-<div>
+<div class="nav">
     <nav class="bg-gray-800 p-4">
-        <div class="container mx-auto flex justify-between items-center">
+        <div class="mx-auto flex-auto w-64 justify-between items-center nav_container">
 
             <!-- Logo -->
-            <div class="text-white">
-                <a href="#" class="text-xl font-bold">Your Logo</a>
+            <div class="nav-logo text-red-700">
+                <a href="/"><img src="https://images.pngnice.com/download/2007/QNA-Transparent-Background.png"
+                        alt="logo" style="width: 16%;"></a>
             </div>
-
-            <!-- Navbar Links (Hidden on mobile) -->
             <div class="hidden md:flex space-x-4">
                 <% if (locals.user) { %>
-                    <a href="#" class="text-white">Profile</a>
-                    <a href="/sign-out" class="text-white">Logout</a>
+                    <div class="inside">
+
+                        <% if (locals.isAdmin) { %>
+                            <a href="/admin/add-question-form" class="text-white">Add New</a>
+                            <% } %>
+
+
+                                <a href="/sign-out" class="text-white">Logout</a>
+                    </div>
                     <% } else { %>
-                        <a href="/sign-up" class="text-white">Sign In</a>
-                        <a href="/sign-in" class="text-white">Login</a>
+                        <div class="inside">
+                            <a href="/sign-up" class="text-white">Sign In</a>
+                            <a href="/sign-in" class="text-white">Login</a>
+                        </div>
                         <% } %>
-                            <% if (locals.isAdmin) { %>
-                                <a href="/admin/add-question-form" class="text-white">Add Question</a>
-                                <% } %>
+
             </div>
-
-
-
         </div>
     </nav>
-
-
 </div>

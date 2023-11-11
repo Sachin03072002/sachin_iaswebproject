@@ -1,27 +1,29 @@
 <link rel="stylesheet" href="/css/home.css">
-<div class="bg-gray-100">
 
-    <div class="container mx-auto p-8">
-        <h1 class="text-2xl font-bold mb-8">All Questions</h1>
+<div class="home-container bg-gray-100">
+
+    <div class="home-container-inner container mx-auto p-8">
+        <h1 class="home-heading text-2xl font-bold mb-8">All Questions</h1>
 
         <% questions.forEach((question)=> { %>
-            <div class="bg-white p-6 mb-6 rounded-md shadow-md">
-                <h2 class="text-xl mb-2"><a href="/question/<%= question._id %>" class="text-blue-500 hover:underline">
+            <div class="home-question bg-white p-6 mb-6 rounded-md shadow-md">
+                <h2 class="home-title text-xl mb-2"><a href="/question/<%= question._id %>"
+                        class="home-link text-blue-500 hover:underline">
                         <%= question.title %>
                     </a></h2>
-                <p class="text-gray-700 mb-4">
+                <p class="home-text text-gray-700 mb-4">
                     <%= question.questionText %>
                 </p>
-                <div class="mb-4">
-                    <strong class="text-gray-800">Answer:</strong>
+                <div class="home-answer mb-4">
+                    <strong class="home-strong text-gray-800">Answer:</strong>
                     <p>
                         <%= question.answer %>
                     </p>
                 </div>
-                <p class="text-gray-800"><strong>Subject:</strong>
+                <p class="home-strong text-gray-800"><strong>Subject:</strong>
                     <%= question.subject %>
                 </p>
-                <p class="text-gray-800"><strong>Topic:</strong>
+                <p class="home-strong text-gray-800"><strong>Topic:</strong>
                     <%= question.topic %>
                 </p>
             </div>

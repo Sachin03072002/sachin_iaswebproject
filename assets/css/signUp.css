@@ -1,15 +1,81 @@
-/* style.css */
+/* signUp.css */
 
-/* Responsive styles for the sign-up form */
-@media (max-width: 640px) {
-  .max-w-md {
-    max-width: 90%;
-  }
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-/* Additional styles for focus on form elements */
-input:focus,
-button:focus {
-  border-color: #48bb78; /* Change color as needed */
-  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.5); /* Change color and shadow as needed */
+.signUp {
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.signUp-heading {
+  color: #333;
+  text-align: center;
+}
+
+.signUp-form {
+  width: 100%;
+}
+
+.signUp-label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.signUp-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.signUp-input:focus {
+  outline: none;
+  border-color: #3490dc;
+}
+
+.signUp-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.signUp-button:hover {
+  background-color: #45a049;
+}
+
+.signUp-text-center {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signUp-text-blue {
+  color: #3490dc;
+}
+
+.signUp-text-blue:hover {
+  text-decoration: underline;
 }

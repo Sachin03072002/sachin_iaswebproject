@@ -1,55 +1,51 @@
 <link rel="stylesheet" href="/css/AddQuestion.css">
 
-<body class="bg-red-700">
+<div class="bg-gray-200">
 
-    <div class="container mx-auto p-8 mt-10 bg-white shadow-md rounded-md">
-        <h1 class="text-2xl font-bold mb-6">Add Question</h1>
+    <div class="questionForm-container mx-auto p-8 bg-white shadow-md rounded-md">
+        <h1 class="questionForm-heading text-2xl font-bold mb-6">Add Question</h1>
 
-        <form action="/admin/add-question" method="post" enctype="multipart/form-data" class="space-y-4">
-            <div>
-                <label for="title" class="block text-sm font-medium text-gray-600">Title:</label>
-                <input type="text" id="title" name="title" required
-                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
+        <form action="/admin/add-question" method="post" enctype="multipart/form-data" class="questionForm-form">
+            <div class="questionForm-input-group">
+                <label for="questionForm-title" class="questionForm-label">Title:</label>
+                <input type="text" id="questionForm-title" name="title" required class="questionForm-input">
             </div>
 
-            <div>
-                <label for="questionText" class="block text-sm font-medium text-gray-600">Question Text:</label>
-                <textarea id="questionText" name="questionText" rows="4" required
-                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500"></textarea>
+            <div class="questionForm-input-group">
+                <label for="questionForm-questionText" class="questionForm-label">Question Text:</label>
+                <textarea id="questionForm-questionText" name="questionText" rows="4" required
+                    class="questionForm-input"></textarea>
             </div>
 
-            <div>
-                <label for="answer" class="block text-sm font-medium text-gray-600">Answer:</label>
-                <textarea id="answer" name="answer" rows="4" required
-                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500"></textarea>
+            <div class="questionForm-input-group">
+                <label for="questionForm-answer" class="questionForm-label">Answer:</label>
+                <textarea id="questionForm-answer" name="answer" rows="4" required
+                    class="questionForm-input"></textarea>
             </div>
 
-            <div>
-                <label for="image" class="block text-sm font-medium text-gray-600">Image:</label>
-                <input type="file" id="image" name="image" accept="image/*"
-                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
-            </div>
-            <div>
-                <label for="submitTime" class="block text-sm font-medium text-gray-600">Submit Time:</label>
-                <input type="text" id="submitTime" name="submitTime" value="<%= new Date() %>" readonly
-                    class="mt-1 p-2 block w-full border rounded-md bg-gray-100 cursor-not-allowed">
+            <div class="questionForm-input-group">
+                <label for="questionForm-image" class="questionForm-label">Image:</label>
+                <input type="file" id="questionForm-image" name="image" accept="image/*" class="questionForm-input">
             </div>
 
-            <div>
-                <label for="subject" class="block text-sm font-medium text-gray-600">Subject:</label>
-                <input type="text" id="subject" name="subject" required
-                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
+            <div class="questionForm-input-group">
+                <label for="questionForm-submitTime" class="questionForm-label">Submit Time:</label>
+                <input type="text" id="questionForm-submitTime" name="submitTime" value="<%= new Date() %>" readonly
+                    class="questionForm-input-disabled">
             </div>
 
-            <div>
-                <label for="topic" class="block text-sm font-medium text-gray-600">Topic:</label>
-                <input type="text" id="topic" name="topic" required
-                    class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-blue-500">
+            <div class="questionForm-input-group">
+                <label for="questionForm-subject" class="questionForm-label">Subject:</label>
+                <input type="text" id="questionForm-subject" name="subject" required class="questionForm-input">
             </div>
 
-            <div>
-                <input type="submit" value="Submit"
-                    class="bg-green-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-green-600">
+            <div class="questionForm-input-group">
+                <label for="questionForm-topic" class="questionForm-label">Topic:</label>
+                <input type="text" id="questionForm-topic" name="topic" required class="questionForm-input">
+            </div>
+
+            <div class="questionForm-input-group">
+                <button type="submit" class="questionForm-submit-button">Submit</button>
             </div>
         </form>
     </div>

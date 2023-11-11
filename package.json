@@ -1,7 +1,6 @@
 {
   "name": "ias",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -31,5 +30,7 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.5"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }

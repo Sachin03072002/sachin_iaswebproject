@@ -4,6 +4,7 @@ const questionSchema = new mongoose.Schema({
     questionText: String,
     image: Buffer,
     answer: String,
+    submitTime: Date,
     subject: String,
     topic: String,
 }, {

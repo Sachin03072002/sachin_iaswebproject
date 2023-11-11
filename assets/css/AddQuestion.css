@@ -1,77 +1,66 @@
-/* Reset some default styles */
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li {
-  margin: 0;
+/* AddQuestion.css */
+
+body {
+  font-family: "Arial", sans-serif;
+
   padding: 0;
 }
 
-body {
-  font-family: "Helvetica", "Arial", sans-serif;
-}
-
-/* Container */
-.container {
+.questionForm-container {
   max-width: 600px;
-  margin: 50px auto;
-  background-color: #ffffff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 6rem;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Heading */
-h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+.bg-gray-200 {
+  background-color: #f4f4f4;
 }
 
-/* Form */
-form {
+.questionForm-heading {
+  color: #333;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.questionForm-form {
   display: flex;
   flex-direction: column;
 }
 
-/* Form inputs */
-label {
+.questionForm-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.questionForm-label {
   font-size: 0.875rem;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
-input,
-textarea {
-  margin-bottom: 1rem;
+.questionForm-input,
+.questionForm-file-input,
+.questionForm-input-disabled {
+  width: 100%;
   padding: 0.75rem;
-  border: 1px solid #d1d5db; /* Tailwind color: 'gray-300' */
+  border: 1px solid #ccc;
   border-radius: 0.25rem;
+  outline: none;
 }
 
-/* Submit button */
-input[type="submit"] {
-  background-color: #059669; /* Tailwind color: 'green-500' */
-  color: #ffffff;
+.questionForm-submit-button {
+  width: 100%;
   padding: 0.75rem;
+  background-color: #4caf50;
+  color: #fff;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background-color: #047857; /* Tailwind color: 'green-600' */
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 600px) {
-  .container {
-    margin: 20px;
-    max-width: none;
-  }
-
-  h1 {
-    font-size: 1.2rem;
-  }
+.questionForm-submit-button:hover {
+  background-color: #45a049;
 }

@@ -2,6 +2,10 @@ const Question = require('../Models/Question_module');
 
 
 module.exports.addQuestionForm = async function (req, res) {
+
+    if (!res.locals.isAdmin) {
+        return res.redirect('/');
+    }
     return res.render('addQuestionFrom', {
         title: "Add-Question",
 
@@ -10,6 +14,7 @@ module.exports.addQuestionForm = async function (req, res) {
 
 module.exports.addQuestion = async function (req, res) {
     try {
+
         const newQuestion = new Question({
             title: req.body.title,
             questionText: req.body.questionText,

@@ -7,7 +7,7 @@ const userController = require('../Controllers/users_controllers');
 const adminRouter = require('./admin'); // Assuming './admin' is the correct path to your admin router
 
 router.get('/', homeController.home);
-router.get('/question/:id', homeController.getQuestionPage);
+router.get('/question/:id', passport.checkAuthentication, homeController.getQuestionPage);
 
 router.get('/sign-in', userController.signIn);
 router.get('/sign-up', userController.signUp);
